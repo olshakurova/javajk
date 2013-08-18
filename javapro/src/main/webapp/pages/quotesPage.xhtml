@@ -1,0 +1,86 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:p="http://primefaces.prime.com.tr/ui">
+ 
+<h:head>
+    <title>Words Project</title>  
+    <h:outputStylesheet name="css/main.css"/>
+    <h:outputStylesheet name="css/bootstrap.css"/>
+    <h:outputScript name="http://code.jquery.com/jquery.js"/>
+    <h:outputScript name="js/bootstrap.js"/>
+</h:head>
+<body>
+	<div class="div_body">
+		<div class="div_header">
+			  <h1>Words</h1>
+			  <ul class="nav nav-pills">
+			  <li>
+			    <h:link value="Home" outcome="indexPage" />
+			  </li>
+			  <li><h:link value="Words" outcome="wordsPage" /></li>
+			  <li class="active"><h:link value="Quotes" outcome="quotesPage" /></li>
+			</ul>
+		</div>
+	 
+	<div class="div_main">
+		<div class="div_nav">
+	    </div>
+		<div class="div_content">
+		<h:form>
+	         <table>
+	         	<tr>
+	                <td><h:outputLabel for="qauthor" value="Author:" /></td>
+	                <td><p:inputText id="qauthor" value="#{quoteBean.qauthor}"/> </td>
+	             </tr>
+	             <tr>
+	                <td><h:outputLabel for="quote" value="Quote:" /></td>
+	                <td><p:inputTextarea rows="5" cols="50" id="quote" value="#{quoteBean.quote}"/></td>
+	             </tr>
+	             <tr>
+	                <td><h:outputLabel for="qnotice" value="Notice:" /></td>
+	                <td><p:inputTextarea rows="5" cols="50" id="qnotice" value="#{quoteBean.qnotice}"/> </td>
+	             </tr>
+	             </table>
+	             <br/>
+	             <table>
+	             <tr >
+	             	<td/>
+	                <td><p:commandButton  id="submit" value="Save" action="#{quoteBean.qsave()}" ajax="false" styleClass="btn btn-primary"/>
+	                <p:commandButton id="reset" value="Reset" action="#{quoteBean.qreset()}" ajax="false" styleClass="btn" /></td>
+	             </tr>
+	         	</table>
+     </h:form>
+     <h:form>
+        <p:dataTable id="quotes" value="#{quoteBean.getQuoteList()}" var="quote" styleClass="table table-hover" >
+            <p:column >
+                <f:facet name="header">
+                    <h:outputText value="Author" />
+                </f:facet>
+                <h:outputText value="#{quote.qauthor}" />
+            </p:column>
+            <p:column >
+                <f:facet name="header">
+                    <h:outputText value="Quote" />
+                </f:facet>
+                <h:outputText value="#{quote.quote}" />
+            </p:column>
+            <p:column >
+                <f:facet name="header">
+                    <h:outputText value="Note!" />
+                </f:facet>
+                <h:outputText value="#{quote.qnotice}" />
+            </p:column>
+            
+        </p:dataTable>
+    </h:form>
+		</div>
+		</div>
+	 
+		<div class="div_footer">
+		    	<p>Footer</p>
+		</div>
+	</div>
+</body>
+</html>

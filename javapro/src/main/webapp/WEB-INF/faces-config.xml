@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config
+    xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+    http://java.sun.com/xml/ns/javaee/web-facesconfig_2_0.xsd"
+    version="2.0">	
+	<managed-bean>
+		<managed-bean-name>wordBean</managed-bean-name>
+		<managed-bean-class>beans.WordManagedBean</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope>
+	</managed-bean>
+	<managed-bean>
+		<managed-bean-name>quoteBean</managed-bean-name>
+		<managed-bean-class>beans.QuoteManagedBean</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope>
+	</managed-bean>
+	<managed-bean>
+		<managed-bean-name>poemBean</managed-bean-name>
+		<managed-bean-class>beans.PoemManagedBean</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope>
+	</managed-bean>
+	
+	<managed-bean>
+		<managed-bean-name>songBean</managed-bean-name>
+		<managed-bean-class>beans.SongManagedBean</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope>
+	</managed-bean>
+	
+	<navigation-rule>
+	    <from-view-id>/pages/wordsPage.xhtml</from-view-id> 
+	    <navigation-case>
+	        <from-outcome>success</from-outcome>
+            <to-view-id>/pages/wordsPage.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+	        <from-outcome>error</from-outcome>
+            <to-view-id>/pages/errorPage.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    
+    <navigation-rule>
+	    <from-view-id>/pages/quotesPage.xhtml</from-view-id> 
+	    <navigation-case>
+	        <from-outcome>success</from-outcome>
+            <to-view-id>/pages/quotesPage.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+	        <from-outcome>error</from-outcome>
+            <to-view-id>/pages/errorPage.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    
+    <navigation-rule>
+	    <from-view-id>/pages/poemsPage.xhtml</from-view-id> 
+	    <navigation-case>
+	        <from-outcome>success</from-outcome>
+            <to-view-id>/pages/poemsPage.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+	        <from-outcome>error</from-outcome>
+            <to-view-id>/pages/errorPage.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    
+    <navigation-rule>
+	    <from-view-id>/pages/songsPage.xhtml</from-view-id> 
+	    <navigation-case>
+	        <from-outcome>success</from-outcome>
+            <to-view-id>/pages/songsPage.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+	        <from-outcome>error</from-outcome>
+            <to-view-id>/pages/errorPage.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    
+</faces-config>

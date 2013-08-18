@@ -1,0 +1,53 @@
+
+body
+{
+	background-image:url(#{resource['images:background1.png']});
+}
+
+.div_body
+{
+    width:800px;
+    position:relative;
+    margin:0 auto;
+}
+.div_header
+{
+    padding-top:10px;
+    text-align:center;
+    letter-spacing:5px;
+}
+
+.div_main
+{
+	float: left;
+	background-color:white;
+}
+.div_content
+{
+	width:700px;
+	float: left;
+	padding: 50px;
+	
+}
+.div_nav
+{
+	float: left;
+	height: 500px;
+}
+.div_footer
+{
+    text-align:center;
+    font-size:0.825em;
+    float: left;
+    width:800px;
+}
+
+
+
+#quotes, .col, .div_nav, .div_content, .div_main, .div_header, .div_footer
+{
+    /* Applying CSS3 rounded corners: */
+    -moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    border-radius:10px;
+}

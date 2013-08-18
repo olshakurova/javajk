@@ -1,0 +1,17 @@
+CREATE TABLE WORD (
+id int(11) NOT NULL,
+word varchar(255) NOT NULL,
+meaning LONGTEXT NOT NULL,
+wnotice LONGTEXT,
+wdate timestamp,
+PRIMARY KEY (`id`)
+);
+
+CREATE TABLE QUOTE (
+id int(11) NOT NULL,
+quote LONGTEXT NOT NULL,
+qauthor varchar(255) NOT NULL,
+qnotice LONGTEXT,
+qdate timestamp,
+PRIMARY KEY (`id`)
+);

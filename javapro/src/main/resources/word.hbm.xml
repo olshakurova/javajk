@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+ 
+<hibernate-mapping>
+  <class name="entities.Word" table="WORD">
+   <id name="id" type="int" column="ID" >
+   <generator class="increment"/>
+  </id>
+ 
+  <property name="word">
+    <column name="WORD" />
+  </property>
+  <property name="meaning">
+    <column name="MEANING"/>
+  </property>
+  <property name="wdate">
+    <column name="WDATE" />
+    <type name="timestamp"/>
+  </property>
+   <property name="wnotice">
+    <column name="WNOTICE"/>
+  </property>
+ </class>
+  <!-- 
+  <class name="entities.Quote" table="QUOTE">
+   <id name="id" type="int" column="ID" >
+   <generator class="increment"/>
+  </id>
+ 
+  <property name="quote">
+    <column name="QUOTE" />
+  </property>
+  <property name="qauther">
+    <column name="QAUTHOR"/>
+  </property>
+  <property name="qdate">
+    <column name="QDATE"/>
+  </property>
+   <property name="qnotice">
+    <column name="QNOTICE"/>
+  </property>
+ </class>
+ 
+  <class name="entities.Poem" table="POEM">
+   <id name="id" type="int" column="ID" >
+   <generator class="increment"/>
+  </id>
+ 
+  <property name="poem">
+    <column name="POEM" />
+  </property>
+  <property name="pauthor">
+    <column name="PAUTHOR"/>
+  </property>
+  <property name="pdate">
+    <column name="PDATE"/>
+  </property>
+   <property name="pnotice">
+    <column name="PNOTICE"/>
+  </property>
+ </class>
+ 
+  <class name="entities.Song" table="SONG">
+   <id name="id" type="int" column="ID" >
+   <generator class="increment"/>
+  </id>
+ 
+  <property name="song">
+    <column name="SONG" />
+  </property>
+  <property name="sauthor">
+    <column name="SAUTHOR"/>
+  </property>
+  <property name="singer">
+    <column name="SINGER"/>
+  </property>
+  <property name="sdate">
+    <column name="SDATE"/>
+  </property>
+   <property name="snotice">
+    <column name="SNOTICE"/>
+  </property>
+ </class>
+ -->
+</hibernate-mapping>

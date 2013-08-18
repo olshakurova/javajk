@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:p="http://primefaces.prime.com.tr/ui"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+      >
+ 
+    <h:head>
+	<title>Words Project</title>
+    <h:outputStylesheet name="css/main.css"/>
+    <h:outputStylesheet name="css/bootstrap.min.css"/>
+    <h:outputScript name="http://code.jquery.com/jquery.js"/>
+    <h:outputScript name="js/bootstrap.min.js"/>
+    </h:head>
+ 
+    <body>
+ 
+	<div class="div_body">
+	<div class="div_header">
+		  <h1>Words words words...</h1>
+	<div id="nav">
+	<ul class="nav nav-pills">
+  		<li class="active">
+    		<a href="pages/indexPage.xhtml">Home</a>
+  		</li>
+  		<li><a href="pages/quotesPage.xhtml">Quotes</a></li>
+  		<li><a href="pages/wordsPage.xhtml">Words</a></li>
+	</ul>
+	</div>
+	
+	</div>
+	 
+	<div class="div_main">
+		<ui:insert name="content" >
+	   	</ui:insert>
+	 	
+	</div>
+ 
+	<div class="div_footer">
+	    	<p>Footer</p>
+	</div>
+	</div>
+	</body>
+</html>

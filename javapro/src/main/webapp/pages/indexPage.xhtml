@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:p="http://primefaces.prime.com.tr/ui">
+    <h:head>
+	<title>Words Project</title>
+    <h:outputStylesheet name="css/main.css"/>
+    <h:outputStylesheet name="css/bootstrap.css"/>
+    <h:outputScript name="http://code.jquery.com/jquery.js"/>
+    <h:outputScript name="js/bootstrap.js"/>
+    </h:head>
+ 
+    <body>
+ 
+	<div class="div_body">
+	<div class="div_header">
+		<p>words words words words words words words words words words words</p>
+		  <h4>words words words words words words words</h4>
+		   <h1
+  style="background:-webkit-linear-gradient(#ee5f5b, #bd362f);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;letter-spacing:10px;">WORDS</h1>
+  <h4>words words words words words words words</h4>
+  <p>words words words words words words words words words words words</p>
+		  <ul class="nav nav-pills">
+		  <li class="active">
+		    <h:link value="Home" outcome="indexPage" />
+		  </li>
+		  <li><h:link value="Words" outcome="wordsPage" /></li>
+		  <li><h:link value="Quotes" outcome="quotesPage" /></li>
+		</ul>
+	</div>
+	 
+	<div class="div_main">
+	
+	<div class="div_nav">
+		 <!-- <h:form>  
+	    	<p:menu>  
+	    		<p:menuitem value="Home"  url="http://localhost:8080/javapro/pages/indexPage.xhtml" icon="ui-icon-home" />  
+	    		<p:menuitem value="Words"  url="http://localhost:8080/javapro/pages/wordsPage.xhtml" icon="ui-icon-heart" />
+	    		<p:menuitem value="Quotes"  url="http://localhost:8080/javapro/pages/quotesPage.xhtml" icon="ui-icon-star" />
+	    	</p:menu>  
+		</h:form>-->
+	</div>
+	<div class="div_content">
+		<p>Words help you to keep the words you want to remember in one place</p>
+		<h3>Words</h3>
+			<p:carousel itemStyleClass="word" autoPlayInterval="16000"   
+			        numVisible="1" rows="3" effect="easeInStrong" circular="true"
+			        id="words" value="#{wordBean.getWords()}" var="word"
+			        itemStyle="width:200px">  
+		        <h:outputText value="#{word.word}" style="font-weight:bold"/>
+		        <br/>
+		        <h:outputText value="#{word.meaning}" />  
+			</p:carousel>  
+	</div>
+	</div>
+ 
+	<div class="div_footer">
+	    	<p>Footer</p>
+	</div>
+	</div>
+	</body>
+</html>
